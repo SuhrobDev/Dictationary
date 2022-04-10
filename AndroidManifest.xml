@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="185" android:versionName="1.8.5" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="com.smartbox.dictionary" platformBuildVersionCode="31" platformBuildVersionName="12">
+	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="31" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+	<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+	<queries>
+		<intent>
+			<action android:name="android.intent.action.VIEW" />
+			<category android:name="android.intent.category.BROWSABLE" />
+			<data android:scheme="https" />
+		</intent>
+		<intent>
+			<action android:name="android.support.customtabs.action.CustomTabsService" />
+		</intent>
+	</queries>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	<application android:theme="resourceId:0x7f100008" android:label="English-Uzbek Dictionary" android:icon="res/CG.png" android:name="com.smartbox.dictionary.DictionaryApplication" android:allowBackup="true" android:supportsRtl="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:requestLegacyExternalStorage="true">
+		<activity android:label="English-Uzbek Dictionary" android:name="com.smartbox.dictionary.HomeActivity" android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="English-Uzbek Dictionary" android:name="com.smartbox.dictionary.DictionaryActivity" android:configChanges="0xfb0" />
+		<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-8801755723223837~5689479306" />
+		<activity android:name="com.appbrain.AppBrainActivity" android:configChanges="0xfb0" />
+		<provider android:name="com.appbrain.AppBrainInitProvider" android:exported="false" android:authorities="com.smartbox.dictionary.AppBrainInitProvider" />
+		<service android:name="com.appbrain.AppBrainService" />
+		<service android:name="com.appbrain.AppBrainJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="false" />
+		<receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false" />
+		<service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false" />
+		<service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false" />
+		<service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+		</service>
+		<activity android:theme="@android:style/Theme.Translucent" android:name="com.google.android.gms.ads.AdActivity" android:exported="false" android:configChanges="0xfb0" />
+		<provider android:name="com.google.android.gms.ads.MobileAdsInitProvider" android:exported="false" android:authorities="com.smartbox.dictionary.mobileadsinitprovider" android:initOrder="100" />
+		<service android:name="com.google.android.gms.ads.AdService" android:enabled="true" android:exported="false" />
+		<provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.smartbox.dictionary.firebaseinitprovider" android:initOrder="100" />
+		<activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" />
+		<meta-data android:name="com.google.android.gms.version" android:value="12451000" />
+		<provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.smartbox.dictionary.androidx-startup">
+			<meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup" />
+			<meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup" />
+			<meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup" />
+		</provider>
+		<service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="true" android:exported="false" android:directBootAware="false" />
+		<service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="false" android:exported="true" android:directBootAware="false" />
+		<service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="true" android:exported="false" android:directBootAware="false" />
+		<receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false" />
+		<receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+				<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="android.intent.action.BATTERY_OKAY" />
+				<action android:name="android.intent.action.BATTERY_LOW" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+				<action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.intent.action.TIME_SET" />
+				<action android:name="android.intent.action.TIMEZONE_CHANGED" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="true" android:exported="false" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+			</intent-filter>
+		</receiver>
+		<service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true" />
+	</application>
+</manifest>

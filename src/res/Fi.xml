@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto" android:id="false" android:focusableInTouchMode="true" android:layout_width="-1" android:layout_height="-1">
+	<androidx.appcompat.widget.Toolbar android:theme="resourceId:0x7f100212" android:id="false" android:background="{2:2130903267}" android:layout_width="-1" android:layout_height="-2" android:minHeight="{2:2130903046}" android:elevation="4dp">
+		<RelativeLayout android:layout_width="-1" android:layout_height="-2">
+			<androidx.appcompat.widget.AppCompatEditText android:textColor="9d000" android:textColorHighlight="fefefe" android:textColorHint="fefefe" android:layout_gravity="0x11" android:id="false" android:layout_width="-1" android:layout_height="-2" android:hint="Search-Qidiruv" android:selectAllOnFocus="true" android:layout_alignParentTop="true" android:inputType="0x80001" android:textCursorDrawable="res/4T.xml" />
+			<androidx.appcompat.widget.AppCompatImageButton android:id="false" android:background="resourceId:0x0" android:layout_width="-2" android:layout_height="-2" android:src="res/v1.png" android:text="Search-Qidiruv" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:title="Search-Qidiruv" />
+		</RelativeLayout>
+	</androidx.appcompat.widget.Toolbar>
+	<LinearLayout android:orientation="0" android:id="false" android:layout_width="-1" android:layout_height="-1" android:layout_below="false">
+		<RelativeLayout android:id="false" android:visibility="2" android:layout_width="-1" android:layout_height="-1">
+			<com.smartbox.dictionary.ui.EmptyRecyclerView android:id="false" android:scrollbars="0x200" android:clipToPadding="false" android:layout_width="-1" android:layout_height="-1" />
+			<LinearLayout android:gravity="0x10" android:orientation="1" android:id="false" android:visibility="2" android:layout_width="-1" android:layout_height="-1">
+				<TextView android:gravity="0x11" android:layout_gravity="0x11" android:id="false" android:padding="16dp" android:layout_width="-2" android:layout_height="-2" android:text="Phrase is not found, please try another word" />
+			</LinearLayout>
+		</RelativeLayout>
+		<com.smartbox.dictionary.WordView android:id="false" android:visibility="0" android:layout_width="-1" android:layout_height="-1" />
+	</LinearLayout>
+	<RelativeLayout android:gravity="0x1" android:id="false" android:background="res/q_.xml" android:layout_width="-1" android:layout_height="-2" android:layout_alignParentBottom="true" />
+</RelativeLayout>

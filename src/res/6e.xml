@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="-1" android:layout_height="-1">
+	<RelativeLayout android:padding="20dp" android:layout_width="-1" android:layout_height="-1">
+		<TextView android:textAppearance="{2:16842816}" android:textStyle="0x1" android:id="false" android:layout_width="-2" android:layout_height="-2" android:text="Base" />
+		<ImageView android:id="false" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginRight="45dp" android:src="res/YF.png" android:layout_alignParentRight="true" />
+		<ImageView android:id="false" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginRight="5dp" android:src="res/UX.png" android:layout_alignParentRight="true" />
+		<TextView android:textAppearance="{2:16842817}" android:textColor="8a8a8a" android:id="false" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="15dp" android:text="[pronounce]" android:layout_below="false" />
+		<TextView android:textAppearance="{2:16842817}" android:textColor="000" android:id="false" android:layout_width="-1" android:layout_height="-2" android:text="word_description" android:maxLines="9999" android:singleLine="false" android:layout_below="false" />
+		<View android:id="false" android:background="666666" android:layout_width="-1" android:layout_height="1dp" android:layout_marginTop="10dp" android:layout_below="false" />
+		<TextView android:textAppearance="{2:16842817}" android:textStyle="0x2" android:textColor="0763d" android:id="false" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="10dp" android:text="Nearest words" android:layout_below="false" />
+		<androidx.recyclerview.widget.RecyclerView android:id="false" android:layout_width="-1" android:layout_height="-2" android:layout_below="false" />
+	</RelativeLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:icon="res/O01.png" android:id="false" android:title="Tanlanganlar" app:showAsAction="0x2" />
+	<item android:icon="res/Ay.png" android:id="false" android:title="Tilni almashtirish" app:showAsAction="0x1" />
+</menu>
